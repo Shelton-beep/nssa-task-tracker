@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { siteConfig } from "@/config/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nssa Task Tracker",
-  description: "An App for tracking Activities by NSSA departments",
+  title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
+  description: siteConfig.description,
+  icons: [
+    { url: "../public/images/logo.png", href: "../public/images/logo.png" },
+  ],
 };
 
 export default function RootLayout({
