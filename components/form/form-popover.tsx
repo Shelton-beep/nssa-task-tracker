@@ -15,7 +15,7 @@ import { createBoard } from "@/actions/create-board";
 import { toast } from "sonner";
 import FormPicker from "./form-picker";
 import { ElementRef, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 interface FormPopOverProps {
   children: React.ReactNode;
