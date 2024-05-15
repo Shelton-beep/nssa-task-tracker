@@ -27,7 +27,7 @@ const FormSubmit = ({
     <Button
       disabled={pending || disabled}
       type="submit"
-      variant={variant}
+      variant="primary"
       size={"sm"}
       className={cn(className)}
     >
