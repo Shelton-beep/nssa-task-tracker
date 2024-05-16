@@ -16,7 +16,7 @@ const Logo = () => {
         <Image src={logo} alt="Logo" height={30} width={30} priority />
         {/** <p className={(cn"text-lg text-neutral-700 pb-1", headingFont.className)}>Nssa Taskit</p>  */}
         <p className="text-lg text-neutral-700 pb-1">
-          Nssa Task<span className="italic text-amber-700">it.</span>
+          Task<span className="italic text-amber-700">it.</span>
         </p>
       </div>
     </Link>
