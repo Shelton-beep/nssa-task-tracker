@@ -5,7 +5,7 @@ import { ListWrapper } from "./list-wrapper";
 import { ElementRef, useRef, useState } from "react";
 import { useEventListener, useOnClickOutside } from "usehooks-ts";
 import { FormInput } from "@/components/form/form-input";
-import { Input } from "@/components/ui/input";
+
 import { useParams } from "next/navigation";
 import FormSubmit from "@/components/form/form-submit";
 import { Button } from "@/components/ui/button";
