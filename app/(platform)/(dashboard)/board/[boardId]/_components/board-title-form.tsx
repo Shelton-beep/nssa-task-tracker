@@ -15,7 +15,7 @@ interface BoardTitleFormProps {
 const BoardTitleForm = ({ data }: BoardTitleFormProps) => {
   const { execute } = useAction(updateBoard, {
     onSuccess: (data) => {
-      toast.success(`Board ${data.title} updated`);
+      toast.success(`Board updated to ${data.title}`);
       setTitle(data.title);
       disableEditing();
     },
