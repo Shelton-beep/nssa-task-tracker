@@ -3,7 +3,7 @@ import FormSubmit from "@/components/form/form-submit";
 import { FormTextarea } from "@/components/form/form-textarea";
 import { Button } from "@/components/ui/button";
 import { useAction } from "@/hooks/use-action";
-import { Plus, X } from "lucide-react";
+import { Delete, Plus, Trash2, X } from "lucide-react";
 import { useParams } from "next/navigation";
 import { ElementRef, KeyboardEventHandler, forwardRef, useRef } from "react";
 import { toast } from "sonner";
@@ -72,10 +72,18 @@ export const CardForm = forwardRef<HTMLTextAreaElement, CardFormProps>(
             placeholder="Enter a title for this card..."
           />
           <input hidden id="listId" name="listId" value={listId} />
-          <div className="flex items-center gap-x-1">
-            <FormSubmit>Add card</FormSubmit>
-            <Button onClick={disableEditing} size={"sm"} variant={"ghost"}>
-              <X className="h-5 w-5" />
+          <div className="flex justify-around items-center gap-x-1">
+            <FormSubmit>
+              <Plus className="h-4 w-4 font-bold" />
+              Add card
+            </FormSubmit>
+            <Button
+              onClick={disableEditing}
+              size={"sm"}
+              className="bg-rose-500"
+            >
+              <X className="h-4 w-4 font-bold" />
+              Cancel
             </Button>
           </div>
         </form>
